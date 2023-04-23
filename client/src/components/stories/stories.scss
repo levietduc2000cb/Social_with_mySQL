@@ -1,0 +1,59 @@
+@import "../../index.scss";
+.stories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  height: 250px;
+  margin-bottom: 30px;
+  position: relative;
+  @include tablet {
+    height: 150px;
+    gap: 5px;
+  }
+  @include mobile {
+    height: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .story {
+    position: relative;
+    border-radius: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include mobile {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+      }
+    }
+    span {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      font-weight: 500;
+      font-size: 1.5rem;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    color: #5271ff;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    @include mobile {
+      left: 5%;
+      top: 26%;
+    }
+  }
+}

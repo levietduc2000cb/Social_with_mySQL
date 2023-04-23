@@ -1,0 +1,14 @@
+@import "../../index.scss";
+
+.posts {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: themed("bg");
+    &_no-post {
+      text-align: center;
+      color: themed("textColor");
+    }
+  }
+}

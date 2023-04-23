@@ -1,0 +1,55 @@
+@import "../../index.scss";
+
+.left-bar {
+  @include themify($themes) {
+    flex: 2;
+    padding: 20px;
+    position: sticky;
+    height: calc(100vh - 70px);
+    top: 70px;
+    overflow-y: scroll;
+    background-color: themed("bgSoft");
+    color: themed("textColor");
+    @include mobile {
+      display: none;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    hr {
+      margin: 20px 0px;
+      border: none;
+      height: 0.5px;
+      background-color: themed("border");
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      gap: 20px;
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          object-fit: cover;
+        }
+      }
+      li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        img {
+          width: 30px;
+        }
+      }
+      & li:nth-child(1) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

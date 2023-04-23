@@ -1,0 +1,96 @@
+@import "../../index.scss";
+
+.login {
+  background-color: #c3beff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    width: 50%;
+    min-height: 600px;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    @include tablet {
+      width: 70%;
+    }
+    @include mobile {
+      width: 95%;
+    }
+    .left {
+      width: 50%;
+      background: linear-gradient(
+          rgba(39, 11, 96, 0.8),
+          rgba(39, 11, 96, 0.679)
+        ),
+        url(../../assets/images/background-login.jpg);
+      background-position: center center;
+      background-size: cover;
+      color: white;
+      padding: 50px;
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+      h1 {
+        font-size: 10rem;
+        line-height: 10rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+      span {
+        font-size: 1.4rem;
+      }
+      button {
+        width: 50%;
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+    .right {
+      width: 50%;
+      display: flex;
+      padding: 50px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      @include tablet {
+        width: 100%;
+      }
+      h1 {
+        font-size: 3.2rem;
+        color: #555;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+        }
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: #938eef;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #0000ffb2;
+        }
+      }
+    }
+  }
+}

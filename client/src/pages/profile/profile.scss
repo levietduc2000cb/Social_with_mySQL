@@ -1,0 +1,120 @@
+@import "../../index.scss";
+
+.profile {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+    .img_wrapper {
+      position: relative;
+      margin-bottom: 10px;
+
+      .background {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      .avatar {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        object-fit: cover;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -70%);
+      }
+    }
+    .container-profile {
+      padding: 0 50px;
+      background-color: themed("bgSoft");
+      @include mobile {
+        padding: 0 5px;
+      }
+      .user-profile {
+        -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        border-radius: 20px;
+        height: 180px;
+        background-color: themed("bg");
+        color: themed("textColor");
+        margin-bottom: 20px;
+        padding: 60px 50px;
+        text-align: center;
+        @include mobile {
+          margin-top: 30px;
+          padding: 30px 50px;
+        }
+        h1 {
+          margin-bottom: 10px;
+        }
+        .user-profile-intro {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          @include mobile {
+            display: block;
+            grid-template-columns: unset;
+          }
+
+          .left {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            align-items: center;
+            @include mobile {
+              justify-content: space-around;
+            }
+            .icon {
+              font-size: 2rem;
+            }
+          }
+          .center {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.5rem;
+            @include mobile {
+              justify-content: space-around;
+              margin-top: 4px;
+            }
+            .icon {
+              font-size: 1.5rem;
+            }
+            .item-profile {
+              span {
+                margin-left: 5px;
+              }
+            }
+          }
+          .right {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            align-items: center;
+            @include mobile {
+              justify-content: space-around;
+              margin-top: 2px;
+            }
+            .icon {
+              font-size: 2rem;
+            }
+            & .icon:last-child {
+              @include mobile {
+                display: none;
+              }
+            }
+          }
+        }
+        button {
+          margin-top: 10px;
+          border: none;
+          background-color: #5271ff;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
